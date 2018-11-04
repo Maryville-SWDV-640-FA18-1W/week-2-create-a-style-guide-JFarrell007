@@ -11,11 +11,14 @@
 
     <!-- Site theme -->
     <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    
 
     <!--  Place Custom Styles Below -->
     <style>
         body {
-            font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+            font-family: 'Raleway', sans-serif;
             color: black;
         }
 
@@ -33,7 +36,7 @@
         }
 
         button {
-            background-color: orange;
+            background-color: #FB9C02;
             border-radius: 5px;
             padding: 10px;
             color: white;
@@ -45,8 +48,9 @@
         }
 
         input.inputField {
+            border-radius: 5px;
             padding: 5px;
-            border: 1px solid orange;
+            border: 2px solid #FB9C02;
         }
 
         div.box {
@@ -56,16 +60,55 @@
             margin: 0 10px 0 10px;
         }
 
+        div.box2 {
+            height: 20px;
+            width: 50px;
+            display: inline-block;
+            margin: 0 10px 0 10px;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-weight: normal;
+        }
+
+        div.box3 {
+            height: 60px;
+            width: 270px;
+            display: inline-block;
+            margin: 0 10px 0 10px;
+            text-align: center;
+            font-family: 'Tangerine', serif;
+            font-weight: normal;
+            font-style: italic;
+            font-size: 48px;
+        }
+
         #primary1 {
-            background-color: orange;
+            background-color: #FB9C02;
+            color: #0C0E09;
+        }
+
+        #primary1-with-white {
+            background-color: #FB9C02;
+            color: white;
         }
 
         #primary2 {
-            background-color: red;
+            background-color: #0C0E09;
+            color: #FB9C02;
+        }
+
+        #primary2-with-white {
+            background-color: #0C0E09;
+            color: white;
         }
 
         #primary3 {
-            background-color: yellow;
+            background-color: #E7C296;
+            color: #0C0E09;
+        }
+        #primary3-with-white {
+            background-color: #E7C296;
+            color: white;
         }
 
         .warning {
@@ -105,6 +148,68 @@
             margin-top: 50px;
             padding: 10px;
             text-align: center;
+            background-color: #FB9C02;
+            color: white;
+        }
+        #text-muted{
+            color: white;
+        }
+        select {
+            font-family: 'FontAwesome', 'sans-serif';
+            border-radius: 5px;
+            padding: 5px;
+            border: 2px solid #FB9C02;    
+            color:#FB9C02;    
+            font-size: 18;            
+        }
+
+        input.resDate{
+            border-radius: 5px;
+            border: 2px solid #FB9C02;  
+            color:#FB9C02;      
+        }
+        .resDate:before {
+            font-family: "FontAwesome";
+            content: "\f073";
+            font-size: 18px;
+            color:#FB9C02;
+        }
+        input.resTime{
+            border-radius: 5px;
+            border: 2px solid #FB9C02;    
+            color:#FB9C02;    
+        }
+        .resTime:before {
+            font-family: "FontAwesome";
+            content: "\f017";
+            font-size: 24px;
+            color:#FB9C02;
+        }
+        input.resUsers{
+            border-radius: 5px;
+            border: 2px solid #FB9C02;    
+            color:#FB9C02;    
+        }
+        .resUsers:before {
+            font-family: "FontAwesome";
+            content: "\f0c0";
+            font-size: 14px;
+            color:#FB9C02;
+        }
+        input.resPhone{
+            border-radius: 5px;
+            border: 2px solid #FB9C02;    
+            color:#FB9C02;    
+        }
+        .resPhone:before {
+            font-family: "FontAwesome";
+            content: "\f10b";
+            font-size: 24px;
+            color:#FB9C02;
+        }
+        .res_date:before,
+        .res_date input {
+            vertical-align: middle;
         }
     </style>
 	<!-- Include script for font awesome icon library -->
@@ -163,8 +268,17 @@
                     <h1>
                         <a name="fonts"></a>Font</h1>
                 </div>
-                <p>My application utilizes the "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica,
-                    Arial, "sans-serif" font-family with black text.</p>
+                <p>My application utilizes "Raleway", "sans-serif" and "Tangerine", "serif" font-families.  
+                    Text colors will be inforporated from the primary color scheme and also include the 
+                    color white to maximize contrast. Text color will vary based on the background color 
+                    on a particular portion of the page</p>
+                <div class="box2" id="primary1"> Text</div>
+                <div class="box2" id="primary1-with-white"> Text</div>
+                <div class="box2" id="primary2"> Text</div>
+                <div class="box2" id="primary2-with-white"> Text</div>
+                <div class="box2" id="primary3"> Text</div>
+                <div class="box2" id="primary3-with-white"> Text</div>
+                <div class="box3" id="primary1"> Restaurant Name</div>
             </div>
             <div class="spacer">
                 <a href="#Top">Back to Top</a>
@@ -227,6 +341,41 @@
                 <form>
                     <label for="name" class="inputLabel">Name</label>
                     <input type="input" id="name" class="inputField" value="">
+                </form>
+                <br>
+                <form>
+                    <label for="date" class="inputLabel">Date</label>
+                    <input type="date" name="reservation-date" class="resDate">
+                </form>
+                <br>
+                <form>
+                    <label for="people" class="inputLabel">Time</label>
+                    <select>
+                        <option value="1200">&#xf017; 12:00 PM</option>
+                        <option value="1230">&#xf017; 12:30 PM</option>
+                        <option value="1300">&#xf017; 1:00 PM</option>
+                        <option value="1330">&#xf017; 1:30 PM</option>
+                        <option value="1400">&#xf017; 2:00 PM</option>
+                        <option value="1430">&#xf017; 2:30 PM</option>
+                    </select>
+                </form>                
+                <br>
+                <form>
+                    <label for="tel" class="inputLabel">Mobile</label>
+                    <i class="fas fa-mobile" style="font-size:24px;color:#FB9C02"></i>
+                    <input type="tel" name="mobile" class="inputField">
+                </form>
+                <br>
+                <form>
+                    <label for="people" class="inputLabel">Guests</label>
+                    <select>
+                        <option value="1">&#xf007; 1 Person</option>
+                        <option value="2">&#xf0c0; 2 People</option>
+                        <option value="3">&#xf0c0; 3 People</option>
+                        <option value="4">&#xf0c0; 4 People</option>
+                        <option value="5">&#xf0c0; 5 People</option>
+                        <option value="6">&#xf0c0; 6 People</option>
+                    </select>
                 </form>
             </div>
             <div class="spacer">
