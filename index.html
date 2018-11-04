@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+
+
     
 
     <!--  Place Custom Styles Below -->
@@ -23,22 +25,41 @@
         }
 
         h1 {
+            font-family: 'Raleway', sans-serif;
             font-size: 24px;
             font-weight: bold;
         }
 
         h2 {
+            font-family: 'Raleway', sans-serif;
             font-size: 20px;
+            font-weight: bold;
         }
 
         h3 {
+            font-family: 'Raleway', sans-serif;
             font-size: 16px;
+            font-weight: bold;
         }
 
-        button {
+        .button1 {
+            font-family: 'Raleway', sans-serif;
             background-color: #FB9C02;
             border-radius: 5px;
-            padding: 10px;
+            padding: 5px;
+            color: white;
+            font-weight: bold;
+        }
+        .button2 {
+            background-color: #FB9C02;
+            color: #0C0E09;
+        }
+        .button3 {
+            background-color: #0C0E09;
+            color: #FB9C02;
+        }
+        .button4 {
+            background-color: #0C0E09;
             color: white;
         }
 
@@ -111,11 +132,18 @@
             color: white;
         }
 
+        .info {
+            background-color: rgb(128, 128, 231);
+            font-weight: bold;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
         .warning {
             background-color: yellow;
             font-weight: bold;
             color: black;
-            padding: 10px;
+            padding: 20px;
             border-radius: 5px;
         }
 
@@ -123,7 +151,7 @@
             background-color: red;
             font-weight: bold;
             color: white;
-            padding: 10px;
+            padding: 20px;
             border-radius: 5px;
         }
 
@@ -131,7 +159,7 @@
             background-color: green;
             font-weight: bold;
             color: white;
-            padding: 10px;
+            padding: 20px;
             border-radius: 5px;
         }
 
@@ -148,8 +176,8 @@
             margin-top: 50px;
             padding: 10px;
             text-align: center;
-            background-color: #FB9C02;
-            color: white;
+            background-color: #0C0E09;
+            color: #FB9C02;
         }
         #text-muted{
             color: white;
@@ -211,6 +239,78 @@
         .res_date input {
             vertical-align: middle;
         }
+        /* Custom checkbox used from https://www.w3schools.com Custom Checkbox example*/
+        .cbcontainer {
+            font-family: 'Raleway', sans-serif;
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .cbcontainer input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color:#E7C296;
+        }
+
+        .cbcontainer:hover input ~ .checkmark {
+            background-color: #FB9C02;
+        }
+
+        .cbcontainer input:checked ~ .checkmark {
+            background-color: #0C0E09;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .cbcontainer input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .cbcontainer .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }    
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
     </style>
 	<!-- Include script for font awesome icon library -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -223,7 +323,7 @@
             <div class="navbar-header">
                 <a href="#">
                     <span class="navbar-brand">
-                        <i class="fas fa-home"></i>My Interface Style Guide</span>
+                        <i class="fas fa-home"></i>Dewey and Fenn's Interface Style Guide</span>
                 </a>
             </div>
         </div>
@@ -259,6 +359,7 @@
                         <a name="about"></a>My Styles</h1>
                 </div>
                 <p>This page contains specific style guide information for my front end interface.</p>
+                <p>This is for a fictitious restaurant named after my dogs Dewey and Fenn.</p>
             </div>
             <!-- End About -->
 
@@ -278,7 +379,7 @@
                 <div class="box2" id="primary2-with-white"> Text</div>
                 <div class="box2" id="primary3"> Text</div>
                 <div class="box2" id="primary3-with-white"> Text</div>
-                <div class="box3" id="primary1"> Restaurant Name</div>
+                <div class="box3" id="primary1"> Dewey and Fenn's</div>
             </div>
             <div class="spacer">
                 <a href="#Top">Back to Top</a>
@@ -324,7 +425,10 @@
                         <a name="buttons"></a>Buttons</h1>
                 </div>
                 <p>The application will feature buttons that contain the below color and shape:</p>
-                <button>My Button</button>
+                <button class="button1">Button 1</button>
+                <button class="button1 button2">Button 2</button>
+                <button class="button1 button3">Button 3</button>
+                <button class="button1 button4">Button 4</button>
             </div>
             <div class="spacer">
                 <a href="#Top">Back to Top</a>
@@ -377,6 +481,29 @@
                         <option value="6">&#xf0c0; 6 People</option>
                     </select>
                 </form>
+                <br>
+                <form>
+                    <input type="radio" name="answer" value="true" checked> True<br>
+                    <input type="radio" name="answer" value="false"> False<br>
+                    <input type="radio" name="answer" value="other"> Other  
+                </form>   
+                <br>
+                <label class="cbcontainer">One
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="cbcontainer">Two
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="cbcontainer">Three
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="cbcontainer">Four
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>            
             </div>
             <div class="spacer">
                 <a href="#Top">Back to Top</a>
@@ -390,10 +517,23 @@
                         <a name="messages"></a>Messages</h1>
                 </div>
                 <p>For various completed tasks, application notifications will be presented to the user based.  The following contextual messages will be used.</p>
-                <p class="warning">Warning!</p>
-                <p class="danger">Danger!</p>
-                <p class="success">Success!</p>
             </div>
+            <div class="info">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>General Information!</strong> Indicates Information
+            </div>
+            <div class="warning">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>Warning!</strong> Indicates Warning
+            </div>
+            <div class="danger">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>Danger!</strong> Indicates Danger
+            </div>
+            <div class="success">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <strong>Success!</strong> Indicates Success
+            </div>    
             <div class="spacer">
                 <a href="#Top">Back to Top</a>
             </div>
@@ -402,7 +542,7 @@
     </div>
     <div id="footer">
         <div class="container">
-            <p class="text-muted">Copyright My Style Guide</p>
+            <p class="text-muted">Dewey and Fenn's Restaurant Style Guide</p>
         </div>
     </div>
 </body>
